@@ -11,7 +11,11 @@ import { RecipesDetailComponent } from './recipes/recipes-detail/recipes-detail.
 import { RecipesItemComponent } from './recipes/recipes-list/recipes-item/recipes-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+
 import { DropDownDirective } from './shared/dropdown.directive';
+
+//while adding service here we can use it as the same instance through all components , directives and another services
+import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 
 
@@ -32,7 +36,7 @@ BrowserModule,
     AppRoutingModule,
     FormsModule                                 
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
